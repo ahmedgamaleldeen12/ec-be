@@ -3,9 +3,14 @@ import { AppModule } from './app.module';
 import { ConfigService } from '@nestjs/config';
 import { setupSwagger } from './swagger/setup-swagger';
 import { openSwagger } from './swagger/open-swagger';
+import { ensureDatabase } from './database/ensure-database';
+import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
+  await ensureDatabase();
+
   const app = await NestFactory.create(AppModule);
+  app.useGlobalPipes(new ValidationPipe());
   setupSwagger(app);
 
   const configService = app.get(ConfigService);

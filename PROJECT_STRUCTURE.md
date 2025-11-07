@@ -1,6 +1,6 @@
 # 📁 Project Structure
 
-> Generated automatically on **11/7/2025, 9:02:49 PM**
+> Generated automatically on **11/7/2025, 10:31:27 PM**
 
 ```
 ├── .env.development
@@ -12,14 +12,21 @@
 ├── nest-cli.json
 ├── package-lock.json
 ├── package.json
-├── project-structure.txt
+├── PROJECT_STRUCTURE.md
 ├── README.md
 ├── src
-│   ├── app.controller.spec.ts
-│   ├── app.controller.ts[-]
 │   ├── app.module.ts
-│   ├── app.service.ts
+│   ├── database
+│   │   └── ensure-database.ts
 │   ├── main.ts
+│   ├── products
+│   │   ├── dto
+│   │   │   ├── create-product.dto.ts
+│   │   │   └── update-product.dto.ts
+│   │   ├── product.entity.ts
+│   │   ├── products.controller.ts
+│   │   ├── products.module.ts
+│   │   └── products.service.ts
 │   └── swagger
 │       ├── open-swagger.ts
 │       └── setup-swagger.ts
